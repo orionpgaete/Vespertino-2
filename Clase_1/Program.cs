@@ -6,7 +6,7 @@ namespace Clase_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola Mundo Vespertino 2!");
+
         }
     }
 }
