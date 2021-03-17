@@ -7,13 +7,22 @@ namespace Clase_1
     {
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Cyan;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Clear(); //100% el color de fondo
             Console.WriteLine("Hola Mundo 2021");
             Console.WriteLine("Ingrese su nombre");
-            string nombre = Console.ReadLine();
+            //esto es un scaner
+            String nombre = Console.ReadLine();
+            // print de pantalla con parametro
             Console.WriteLine("Su nombre es {0} ", nombre);
+            Console.WriteLine("Ingrese la edad: ");
+            string edadTx = Console.ReadLine().Trim();
+            int edad = Int32.Parse(edadTx);
+            //"      hola" .TrimStart()
+            //"hola      " .TrimEnd()
+            Console.WriteLine("Su edad es {0}", edad);
+
+            Console.WriteLine("Maximo int: {0}", int.MaxValue);
+            Console.WriteLine("Maximo uint: {0}", uint.MaxValue);
+          
 
             Console.ReadKey();
         
