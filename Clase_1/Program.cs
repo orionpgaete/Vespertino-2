@@ -9,7 +9,7 @@ namespace Clase_1
         {
             Console.BackgroundColor = ConsoleColor.Cyan;
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Clear();
+            Console.Clear(); //100% el color de fondo
             Console.WriteLine("Hola Mundo 2021");
             Console.WriteLine("Ingrese su nombre");
             string nombre = Console.ReadLine();
