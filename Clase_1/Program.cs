@@ -10,7 +10,7 @@ namespace Clase_1
             Console.WriteLine("Hola Mundo 2021");
             Console.WriteLine("Ingrese su nombre");
             string nombre = Console.ReadLine();
-            Console.WriteLine("Su nombre es " + nombre);
+            Console.WriteLine("Su nombre es {0} {1}", nombre, 2021);
             Console.ReadKey();
         
         }
