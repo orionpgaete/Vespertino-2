@@ -25,6 +25,7 @@ namespace Clase_1
             {
                 Console.WriteLine("Su nombre es {0} y su edad es {1}", nombre, edad);
             }
+
             Console.ReadKey();
 
              
