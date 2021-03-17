@@ -7,10 +7,14 @@ namespace Clase_1
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Clear();
             Console.WriteLine("Hola Mundo 2021");
             Console.WriteLine("Ingrese su nombre");
             string nombre = Console.ReadLine();
-            Console.WriteLine("Su nombre es {0} {1}", nombre, 2021);
+            Console.WriteLine("Su nombre es {0} ", nombre);
+
             Console.ReadKey();
         
         }
