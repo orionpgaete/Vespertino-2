@@ -47,11 +47,6 @@ namespace CalculoIMC
             Console.WriteLine("Estatura: {0}", estatura);
             Console.WriteLine("IMC: {0}", peso/(estatura*estatura));
             Console.ReadKey();
-
-
-
-
-
         }
     }
 }

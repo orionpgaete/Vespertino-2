@@ -49,7 +49,7 @@ namespace AdminPersonas
                 } while (!esValido);
 
                 Persona p = new Persona();
-                p.nombre = nombre;
+                p.Nombre = nombre;
 
                 Console.WriteLine("Nombre: {0}", nombre);
                 Console.WriteLine("Telefono: {0}", telefono);

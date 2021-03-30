@@ -6,12 +6,20 @@ namespace AdminPersonas
 {
     public class Persona
     {
-        public string nombre { get; set; }
-        public uint telefono { get; set; }
-        public double peso { get; set; }
-        public double estatura { get; set; }
+        private string nombre;
+        private uint telefono;
+        private double peso;
+        private double estatura;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public uint Telefono { get => telefono; set => telefono = value; }
+        public double Peso { get => peso; set => peso = value; }
+        public double Estatura { get => estatura; set => estatura = value; }
+
+        
 
 
-      //  public string Nombre { get => nombre; set => nombre = value; }
+
+        //  public string Nombre { get => nombre; set => nombre = value; }
     }
 }
