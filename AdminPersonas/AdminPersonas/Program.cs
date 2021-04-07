@@ -7,10 +7,11 @@ namespace AdminPersonas
 {
     public partial class Program
     {
-        
+        //static PersonasDAL personasDAL = new PersonasDAL();
+        static IPersonasDAL personasDAL = new PersonasDALObjetos();
         static void MostrarPersonas()
         {
-            List<Persona> personas = new PersonasDAL().ObtenerPersonas();
+            List<Persona> personas = personasDAL.ObtenerPersonas();
             for (int i=0; i< personas.Count(); ++i)
             {
                 Persona actual = personas[i];
@@ -28,7 +29,7 @@ namespace AdminPersonas
 
             //FORMA 2
             Console.WriteLine("Ingrese nombre");
-            new PersonasDAL()
+            personasDAL
                 .FiltrarPersonas(Console.ReadLine().Trim())
                 .ForEach(p => Console.WriteLine("Nombre: {0} Peso:{1}", p.Nombre, p.Peso));
 
@@ -86,14 +87,14 @@ namespace AdminPersonas
                     Telefono = telefono,
                     Peso = peso
                 };
-                new PersonasDAL().AgregarPersona(p);
+                personasDAL.AgregarPersona(p);
 
-
+                p.calcularIMC();
                 Console.WriteLine("Nombre: {0}", p.Nombre);
                 Console.WriteLine("Telefono: {0}", p.Telefono);
                 Console.WriteLine("Peso: {0}", p.Peso);
                 Console.WriteLine("Estatura: {0}", p.Estatura);
-                Console.WriteLine("IMC: {0}", peso / (estatura * estatura));
+                Console.WriteLine("IMC: {0}", p.IMC.Texto);
                 Console.ReadKey();
 
             }

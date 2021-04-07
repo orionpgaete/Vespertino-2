@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AdminPersonasModel.DAL
 {
-    public class PersonasDAL
+    public class PersonasDALObjetos : IPersonasDAL
     {
         //1. Crear una lista para guardar personas
         private static List<Persona> personas = new List<Persona>();
