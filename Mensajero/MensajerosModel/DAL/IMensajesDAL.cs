@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MensajeroModel.DAL
+namespace MensajerosModel.DAL
 {
     public interface IMensajesDAL
     {
