@@ -31,8 +31,18 @@ namespace Mensajero
             return continuar;
 
         }
+
+        static void IniciarServidor()
+        {
+
+        }
         static void Main(string[] args)
         {
+            //1. Iniciar el Servidor Socket en el puerto 3000
+            //2. El puerto tiene que ser configurable en el App.Config
+            //3. cuando reciba un cliente, tiene que solicitar a ese cliente el 
+            //nombre y el texto, y agregar un nuevo mensaje con el tipo TCP.
+
             while (Menu()) ;
         }
 
