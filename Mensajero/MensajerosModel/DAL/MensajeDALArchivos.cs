@@ -27,11 +27,6 @@ namespace MensajerosModel.DAL
             return instancia;
         }
 
-
-
-
-
-
         private static string url = Directory.GetCurrentDirectory();
         private static string archivo = url + "/mensajes.txt";
         public void AgregarMensaje(Mensaje mensaje)
