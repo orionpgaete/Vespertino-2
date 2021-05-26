@@ -36,8 +36,7 @@ namespace Mensajero
             return continuar;
 
         }
-
-     
+             
         static void Main(string[] args)
         {
             //1. Iniciar el Servidor Socket en el puerto 3000
@@ -58,6 +57,8 @@ namespace Mensajero
             //2. ¿Evitar que dos clientes ingresen al archivo a la vez?
             //3. ¿evitar el bloqueo mutuo?
 
+            /// 
+
         }
 
         static void Ingresar()
@@ -72,13 +73,21 @@ namespace Mensajero
                 Texto = texto,
                 Tipo= "Aplicacion"
             };
-            mensajesDAL.AgregarMensaje(mensaje);
+            lock (mensajesDAL)
+            {
+                mensajesDAL.AgregarMensaje(mensaje);
+            }
+            
 
         }
 
         static void Mostrar()
         {
-            List<Mensaje> mensajes = mensajesDAL.ObtenerMensajes();
+            List<Mensaje> mensajes = null;
+            lock (mensajesDAL)
+            {
+                mensajes = mensajesDAL.ObtenerMensajes();
+            }
             foreach(Mensaje mensaje in mensajes)
             {
                 Console.WriteLine(mensaje);
