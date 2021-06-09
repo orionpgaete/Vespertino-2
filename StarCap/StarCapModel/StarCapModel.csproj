@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\BebidasDALObjetos.cs" />
     <Compile Include="DAL\ClientesDALObjetos.cs" />
+    <Compile Include="DAL\IBebidaDAL.cs" />
     <Compile Include="DAL\IClientesDAL.cs" />
     <Compile Include="DTO\Bebida.cs" />
     <Compile Include="DTO\Cliente.cs" />

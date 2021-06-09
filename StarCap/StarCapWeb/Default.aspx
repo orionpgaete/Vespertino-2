@@ -17,7 +17,7 @@
                         <asp:TextBox runat="server" ID="nombreTxt" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="rutTxt">Nombre</label>
+                        <label for="rutTxt">Rut</label>
                         <asp:TextBox runat="server" ID="rutTxt" CssClass="form-control"></asp:TextBox>
                     </div>
                     <div class="form-group">
