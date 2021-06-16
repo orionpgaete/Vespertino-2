@@ -10,5 +10,8 @@ namespace StarCapModel.DAL
     {
         List<Cliente> Obtener();
         void Agregar(Cliente cliente);
+
+        //Eliminar TODO, debera de recibir el PK
+        void Eliminar(string rut);
     }
 }

@@ -41,11 +41,11 @@ namespace StarCapWeb
             int nivel = Convert.ToInt32(this.nivelRb1.SelectedItem.Value);
 
             //2. Construir el objeto de tipo Cliente
-            Bebida bebida = new Bebida()
-            {
-                Codigo = bebidaValor,
-                Nombre = bebidaTexto
-            };
+
+            List<Bebida> bebidas = bebidaDAL.ObtenerBebidas();
+            Bebida bebida = bebidas.Find(b => b.Codigo == this.bebidaDb1.SelectedItem.Value);
+
+
             Cliente cliente = new Cliente()
             {
                 Nombre = nombre,

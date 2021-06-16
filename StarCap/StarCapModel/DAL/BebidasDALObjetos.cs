@@ -24,6 +24,7 @@ namespace StarCapModel.DAL
                 },
                 new Bebida()
                 {
+                    Nombre = "Trompo metro cuadrado",
                     Codigo= "ALEXIS-07"
                 }
 

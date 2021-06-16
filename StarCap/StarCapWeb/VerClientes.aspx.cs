@@ -21,5 +21,15 @@ namespace StarCapWeb
                 this.grillaCliente.DataBind();
             }
         }
+
+        protected void grillaCliente_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "eliminar")
+            {
+
+                string rut = Convert.ToString(e.CommandArgument);
+                clientesDAL.Eliminar(rut);
+            }
+        }
     }
 }

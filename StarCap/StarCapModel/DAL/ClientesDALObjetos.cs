@@ -14,9 +14,18 @@ namespace StarCapModel.DAL
             clientes.Add(cliente);
         }
 
+        public void Eliminar(string rut)
+        {
+            Cliente eliminado = clientes.Find(c => c.Rut == rut);
+            clientes.Remove(eliminado);
+
+        }
+
         public List<Cliente> Obtener()
         {
             return clientes;
         }
+
+ 
     }
 }
