@@ -7,7 +7,17 @@
                     <h3>Ver Cliente</h3>
                 </div>
                 <div class="card-body">
-                    <asp:GridView CssClass="table table-hover table-bordered" 
+                    <div class="form-group">
+                        <label for="nivelDb1">Filtrar por nivel: </label>
+                        <asp:DropDownList AutoPostBack="true" OnSelectedIndexChanged="nivelDb1_SelectedIndexChanged" runat="server" ID="nivelDb1">
+                            <asp:ListItem Value="1" Text="Silver"></asp:ListItem>
+                            <asp:ListItem Value="2" Text="Gold"></asp:ListItem>
+                            <asp:ListItem Value="3" Text="Platinum"></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
+
+                    <asp:GridView CssClass="table table-hover table-bordered mt-5" 
                         OnRowCommand="grillaCliente_RowCommand"
                         AutoGenerateColumns="false"
                         runat="server" ID="grillaCliente">

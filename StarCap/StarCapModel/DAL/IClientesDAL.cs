@@ -13,5 +13,7 @@ namespace StarCapModel.DAL
 
         //Eliminar TODO, debera de recibir el PK
         void Eliminar(string rut);
+
+        List<Cliente> Filtrar(int nivel);
     }
 }
