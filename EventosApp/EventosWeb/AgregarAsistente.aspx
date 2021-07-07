@@ -18,12 +18,16 @@
                         <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
+                        <label for="apellidoTxt">Apellido</label>
+                        <asp:TextBox ID="apellidoTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
                          <label for="edadTxt">Edad</label>
                         <asp:TextBox ID="edadTxt" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                         <label for="empresaTxt"></label>
-                        <asp:TextBox ID="empresaTxt" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                         <label for="empresaTxt">Empresa</label>
+                        <asp:TextBox ID="empresaTxt" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
                          <label for="estadoRb1">Estado</label>
@@ -36,7 +40,7 @@
                         <label for="regionDDL">Region</label>
                         <asp:DropDownList ID="regionDDL" runat="server"></asp:DropDownList>
                     </div>
-                    <asp:Button runat="server" ID="ingresarBtn" Text="Ingresar" />
+                    <asp:Button OnClick="ingresarBtn_Click" runat="server" CssClass="btn btn-secondary float-right" ID="ingresarBtn" Text="Ingresar" />
                 </div>
             </div>
         </div>
