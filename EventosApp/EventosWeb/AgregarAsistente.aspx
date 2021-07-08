@@ -12,22 +12,28 @@
                     <div class="form-group">
                         <label for="rutTxt">Rut</label>
                         <asp:TextBox ID="rutTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ControlToValidate="rutTxt" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Ingrese un rut Valido"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                         <label for="nombreTxt">Nombre</label>
                         <asp:TextBox ID="nombreTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ControlToValidate="nombreTxt" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Debe Ingresar nombre"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                         <label for="apellidoTxt">Apellido</label>
                         <asp:TextBox ID="apellidoTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ControlToValidate="apellidoTxt" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Debe ingresar un apellido"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                          <label for="edadTxt">Edad</label>
                         <asp:TextBox ID="edadTxt" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:RangeValidator CssClass="text-danger" ControlToValidate="edadTxt" ID="RangeValidator1" runat="server" Type="Integer" MinimumValue="18" ErrorMessage="Debe ingresar una edad Valida entre 18 y 100 años"></asp:RangeValidator>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ControlToValidate="edadTxt" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Debe ingresar la edad"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                          <label for="empresaTxt">Empresa</label>
                         <asp:TextBox ID="empresaTxt" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator CssClass="text-danger" ControlToValidate="empresaTxt" ID="RequiredFieldValidator5" runat="server" ErrorMessage="Debe ingresar nombre empresa"></asp:RequiredFieldValidator>
                     </div>
                     <div class="form-group">
                          <label for="estadoRb1">Estado</label>

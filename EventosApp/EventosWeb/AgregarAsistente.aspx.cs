@@ -26,17 +26,21 @@ namespace EventosWeb
 
         protected void ingresarBtn_Click(object sender, EventArgs e)
         {
-            Asistente asistente = new Asistente();
-            asistente.Rut = this.rutTxt.Text.Trim();
-            asistente.Nombre = this.nombreTxt.Text.Trim();
-            asistente.Apellido = this.apellidoTxt.Text.Trim();
-            asistente.Edad = Convert.ToInt32(this.edadTxt.Text.Trim());
-            asistente.Estado = this.estadoRb1.SelectedValue;
-            asistente.Empresa = this.empresaTxt.Text.Trim();
-            asistente.IdRegion = Convert.ToInt32(this.regionDDL.SelectedItem.Value);
+            if (Page.IsValid)
+            {
+                Asistente asistente = new Asistente();
+                asistente.Rut = this.rutTxt.Text.Trim();
+                asistente.Nombre = this.nombreTxt.Text.Trim();
+                asistente.Apellido = this.apellidoTxt.Text.Trim();
+                asistente.Edad = Convert.ToInt32(this.edadTxt.Text.Trim());
+                asistente.Estado = this.estadoRb1.SelectedValue;
+                asistente.Empresa = this.empresaTxt.Text.Trim();
+                asistente.IdRegion = Convert.ToInt32(this.regionDDL.SelectedItem.Value);
 
-            this.asistenteDAL.AgregarAsistente(asistente);
-            Response.Redirect("MostrarAsistente.aspx");
+                this.asistenteDAL.AgregarAsistente(asistente);
+                Response.Redirect("MostrarAsistente.aspx");
+            }
+           
         }
     }
 }
