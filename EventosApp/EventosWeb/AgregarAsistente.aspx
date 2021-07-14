@@ -27,9 +27,9 @@
                     <div class="form-group">
                          <label for="edadTxt">Edad</label>
                         <asp:TextBox ID="edadTxt" TextMode="Number" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RangeValidator CssClass="text-danger" ControlToValidate="edadTxt" ID="RangeValidator1" runat="server" Type="Integer" MinimumValue="18" ErrorMessage="Debe ingresar una edad Valida entre 18 y 100 años"></asp:RangeValidator>
                         <asp:RequiredFieldValidator CssClass="text-danger" ControlToValidate="edadTxt" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Debe ingresar la edad"></asp:RequiredFieldValidator>
-                    </div>
+                        <asp:RangeValidator ControlToValidate="edadTxt" ID="RangeValidator1" runat="server" Type="Integer" ErrorMessage="Debe ingresar un rango Valido" MaximumValue="99" MinimumValue="18"></asp:RangeValidator>
+                        </div>
                     <div class="form-group">
                          <label for="empresaTxt">Empresa</label>
                         <asp:TextBox ID="empresaTxt" CssClass="form-control" runat="server"></asp:TextBox>
